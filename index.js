@@ -35,7 +35,7 @@ app.get('/', (req, res) => res.render('home'));
 app.post('/upload', (req, res) => {
     avatarUpload(req, res, err => {
         if (err) return res.send(`LOI: ${err}`);
-        res.send('UPLOAD THANH CONG');
+        res.send('UPLOAD THANH CONG' + req.body.username);
     });
 });
 
